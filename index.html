@@ -36,6 +36,16 @@
    </head>
 
    <body>
+      <div id="payment" style="font-size: 2em;"> Payment Due on September 5, 2021. Please make the payment at the earliest to continue uninterrupted services.</div>
+      <script>
+         var date1 = new Date("09/05/2021");
+         var date2 = new Date();
+         var Difference_In_Time = date1.getTime() - date2.getTime();
+         var Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
+         if (Difference_In_Days > 0){
+             document.getElementById("payment").hidden = true;
+         }
+      </script>
       <!-- Preloader  -->
       <!-- <div class="loader-container">
          <div class="loader1">
